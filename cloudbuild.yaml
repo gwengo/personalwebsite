@@ -1,0 +1,12 @@
+steps:
+  - id: pip-pelican-plugins
+    name: python
+    entrypoint: pip
+    args: ["install", "-r", "requirements.txt", "--user"]
+  - id: pelican
+    name: gcr.io/${PROJECT_ID}/pelican:latest
+    args: ["content", "-v"]
+  - id: bucket
+    name: gcr.io/cloud-builders/gcloud
+    entrypoint: gsutil
+    args: ["-m", "rsync", "-r", "-c", "-d", "./output", "gs://gwengoins.com"]
