@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
-# todo - for gwen
-# change theme
+
 AUTHOR = "gwen goins"
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
